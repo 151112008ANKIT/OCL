@@ -1,30 +1,41 @@
-(set-logic QF_LIA)
-
-;; Declare constants and functions
-(declare-const productId1 Int)
-(declare-const nameOfProduct1 String)
+(declare-const Product_name String)
+(declare-const product_ID Int)
 (declare-const price1 Int)
 (declare-const isAvailable1 Bool)
+(declare-const Product_code String)
+(declare-fun isProduct (Int) Bool)
 
-(declare-const productId2 Int)
-(declare-const nameOfProduct2 String)
-(declare-const price2 Int)
-(declare-const isAvailable2 Bool)
+(assert 
+    (forall ((o Int)) (=> (isProduct o)  
+        (and 
+            (> (str.len Product_name) 5)  
+            (str.in.re Product_name (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
+        )
+    ))
+)
 
-;; Add constraints and properties
+(assert
+    (forall ((o Int)) (=> (isProduct o)
+        (and
+            (and (>= product_ID 111) (<= product_ID 999))
+            (= Product_code (str.++ (str.substr (int.to.str product_ID) 0 3) (str.substr Product_name 0 2)))
+        )
+    ))
+)
 
-;; Ensure product ID and product name are different
-(assert (distinct productId1 productId2))
-(assert (distinct nameOfProduct1 nameOfProduct2))
+(assert
+    (forall ((o Int)) (=> (isProduct o)
+        (> price1 0)
+    ))
+)
 
-;; Unavailable product cannot be bought
-(assert (=> (not isAvailable1) (not (and (= productId1 1) (= price1 10))))) ; Example constraint for product 1
-(assert (=> (not isAvailable2) (not (and (= productId2 2) (= price2 20))))) ; Example constraint for product 2
+(assert
+    (forall ((o Int)) (=> (isProduct o)
+        isAvailable1
+    ))
+)
 
-;; User cannot buy the same product 10 times
-(assert (<= (ite (= productId1 1) (ite (= isAvailable1 true) 1 0) 0) 10)) ; Example constraint for product 1
-(assert (<= (ite (= productId2 2) (ite (= isAvailable2 true) 1 0) 0) 10)) ; Example constraint for product 2
+(assert (exists ((o Int)) (isProduct o)))
 
-;; Generate a model
 (check-sat)
-(get-model)
+(get-value (Product_name product_ID price1 isAvailable1 Product_code))
