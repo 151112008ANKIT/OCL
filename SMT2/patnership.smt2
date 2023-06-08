@@ -1,40 +1,56 @@
-(set-logic QF_BV)
+(declare-const father_name String)
+(declare-const mother_name String)
+(declare-const child_name String)
+(declare-const Partner String)
+(declare-const parent String)
+(declare-const relationship_status String)
+(declare-fun isPerson (Int) Bool)
 
+; Constraint: Length and character pattern for father's name
+(assert 
+    (forall ((o Int)) (=> (isPerson o)  
+        (and 
+            (> (str.len father_name) 15)  
+            (str.in.re father_name (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
+        )
+    ))
+)
 
-;; Declare constants and functions
-(declare-const person1 String)
-(declare-const person2 String)
-(declare-const person3 String)
+; Constraint: Length and character pattern for mother's name
+(assert 
+    (forall ((o Int)) (=> (isPerson o)  
+        (and 
+            (> (str.len mother_name) 15)  
+            (str.in.re mother_name (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
+        )
+    ))
+)
 
-(declare-const partner (Array String String))
-(declare-const parent (Array String (Array String Bool)))
-(declare-const child (Array String (Array String Bool)))
+; Constraint: Length and character pattern for child's name
+(assert 
+    (forall ((o Int)) (=> (isPerson o)  
+        (and 
+            (> (str.len child_name) 15)  
+            (str.in.re child_name (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
+        )
+    ))
+)
 
-;; Add constraints and properties
+; Constraint: Child's parent should be the father and mother
+(assert
+    (forall ((o Int)) (=> (isPerson o)
+        (=> (and (= o 0) (= Partner "father") (= parent "child")) (= father_name child_name))
+        (=> (and (= o 0) (= Partner "mother") (= parent "child")) (= mother_name child_name))
+    ))
+)
 
-;; Name length constraint: Name is of maximum 20 characters
-(assert (<= (str.len person1) 20))
+; Constraint: Generate parent's name as concatenation of father's name and mother's name
+(declare-const parent_name String)
+(assert (= parent_name (str.++ father_name " " mother_name)))
 
-;; No self-partnership constraint: A person cannot be their own partner
-(assert (not (= (select partner person1) person1)))
+; Constraint: Set relationship as "Partners" between the father and mother
+(assert (= relationship_status "Partners"))
 
-;; Each child has two parents constraint
-(assert (forall ((p String))
-           (=> (select (select child p) person1)
-               (and (exists ((par String))
-                           (select (select parent p) par))
-                    (exists ((par String))
-                           (select (select parent p) par))))))
-
-;; Each child's parents are partners constraint
-(assert (forall ((p String))
-           (=> (select (select child p) person1)
-               (exists ((par1 String) (par2 String))
-                       (and (select (select parent p) par1)
-                            (select (select parent p) par2)
-                            (= (select partner par1) par2)
-                            (= (select partner par2) par1))))))
-
-;; Generate a model
+(assert (exists ((o Int)) (isPerson o)))
 (check-sat)
-(get-model)
+(get-value (father_name mother_name child_name parent_name relationship_status))
