@@ -1,0 +1,41 @@
+sat
+((Animal_name "ppppppppppp")
+ (Category "Fish")
+ (warmBlooded false)
+ (feedMilk false)
+ (Animal_code "F"))
+(:added-eqs                 2170
+ :arith-assert-diseq        19
+ :arith-assert-lower        167
+ :arith-assert-upper        118
+ :arith-conflicts           1
+ :arith-eq-adapter          124
+ :arith-fixed-eqs           174
+ :arith-num-rows            146
+ :arith-offset-eqs          52
+ :arith-pivots              29
+ :arith-row-summations      238
+ :arith-tableau-max-columns 198
+ :arith-tableau-max-rows    146
+ :binary-propagations       1893
+ :conflicts                 27
+ :decisions                 174
+ :del-clause                10
+ :final-checks              4
+ :max-generation            1
+ :max-memory                23.02
+ :memory                    19.37
+ :mk-bool-var               2960
+ :mk-clause                 771
+ :num-allocs                60512
+ :num-checks                2
+ :propagations              2243
+ :quant-instantiations      5
+ :rlimit-count              30728
+ :seq-add-axiom             325
+ :seq-char2bit              31
+ :seq-fixed-length          2
+ :seq-length-coherence      1
+ :seq-num-reductions        126
+ :time                      0.05
+ :total-time                0.05)
