@@ -1,0 +1,42 @@
+sat
+((first_name "kcpmmpb")
+ (last_name "hCAhpS")
+ (email "kcpmmpb.hCAhpS@mu.ie")
+ (account_number "2220022242")
+ (address "BDEFGHIJWKLMNOPQRTUV"))
+(:added-eqs                 6973
+ :arith-assert-diseq        52
+ :arith-assert-lower        649
+ :arith-assert-upper        461
+ :arith-eq-adapter          518
+ :arith-fixed-eqs           528
+ :arith-num-rows            618
+ :arith-offset-eqs          240
+ :arith-pivots              65
+ :arith-row-summations      671
+ :arith-tableau-max-columns 752
+ :arith-tableau-max-rows    618
+ :binary-propagations       10179
+ :conflicts                 53
+ :decisions                 718
+ :del-clause                8948
+ :final-checks              8
+ :max-generation            1
+ :max-memory                28.39
+ :memory                    20.15
+ :minimized-lits            259
+ :mk-bool-var               12675
+ :mk-clause                 11719
+ :num-allocs                104239
+ :num-checks                2
+ :propagations              15499
+ :quant-instantiations      8
+ :rlimit-count              94228
+ :seq-add-axiom             1509
+ :seq-char2bit              54
+ :seq-fixed-length          4
+ :seq-length-coherence      1
+ :seq-num-reductions        510
+ :seq-solve-!=              2
+ :time                      0.09
+ :total-time                0.07)
