@@ -1,0 +1,45 @@
+sat
+((first_name "phkkxc")
+ (last_name "HSpLlA")
+ (email "phkkxc.HSpLlA@gmail.com")
+ (Address "Z0LK8")
+ (Area_code "Z")
+ (Street_code "8")
+ (isCatholicPriestBool true)
+ (gender ((as const Array) "male")))
+(:added-eqs                 6036
+ :arith-assert-diseq        31
+ :arith-assert-lower        284
+ :arith-assert-upper        185
+ :arith-eq-adapter          179
+ :arith-fixed-eqs           461
+ :arith-num-rows            128
+ :arith-offset-eqs          268
+ :arith-pivots              59
+ :arith-row-summations      305
+ :arith-tableau-max-columns 188
+ :arith-tableau-max-rows    128
+ :binary-propagations       9048
+ :conflicts                 104
+ :decisions                 1520
+ :del-clause                19399
+ :eliminated-applications   1
+ :final-checks              4
+ :max-generation            1
+ :max-memory                26.01
+ :memory                    19.97
+ :minimized-lits            545
+ :mk-bool-var               15906
+ :mk-clause                 26963
+ :num-allocs                78964
+ :num-checks                2
+ :propagations              30513
+ :quant-instantiations      6
+ :rlimit-count              97472
+ :seq-add-axiom             606
+ :seq-char2bit              66
+ :seq-fixed-length          2
+ :seq-length-coherence      1
+ :seq-num-reductions        221
+ :time                      0.07
+ :total-time                0.07)
