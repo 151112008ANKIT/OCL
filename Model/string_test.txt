@@ -1,0 +1,39 @@
+sat
+((first_name "pppppp")
+ (last_name "pMLtps")
+ (email "pppppp.pMLtps@mu.ie"))
+(:added-eqs                 1513
+ :arith-assert-diseq        14
+ :arith-assert-lower        135
+ :arith-assert-upper        81
+ :arith-eq-adapter          89
+ :arith-fixed-eqs           103
+ :arith-num-rows            105
+ :arith-offset-eqs          41
+ :arith-pivots              26
+ :arith-row-summations      169
+ :arith-tableau-max-columns 156
+ :arith-tableau-max-rows    105
+ :binary-propagations       1177
+ :conflicts                 21
+ :decisions                 128
+ :final-checks              5
+ :max-generation            1
+ :max-memory                23.68
+ :memory                    19.57
+ :minimized-lits            172
+ :mk-bool-var               3936
+ :mk-clause                 4387
+ :num-allocs                59753
+ :num-checks                2
+ :propagations              4139
+ :quant-instantiations      5
+ :rlimit-count              30924
+ :seq-add-axiom             280
+ :seq-char2bit              24
+ :seq-fixed-length          2
+ :seq-length-coherence      1
+ :seq-num-reductions        68
+ :seq-solve-!=              1
+ :time                      0.06
+ :total-time                0.05)
