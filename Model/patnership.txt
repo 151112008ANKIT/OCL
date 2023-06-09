@@ -1,0 +1,45 @@
+sat
+((father_name "PkkPPnPYhkSdKCkh")
+ (mother_name "SKhpHZKkPdKHPXlK")
+ (child_name "KCKPpHpSdpPKPkpl")
+ (parent_name "PkkPPnPYhkSdKCkh SKhpHZKkPdKHPXlK")
+ (relationship_status "Partners"))
+(:added-eqs                 43736
+ :arith-assert-diseq        59
+ :arith-assert-lower        2052
+ :arith-assert-upper        1014
+ :arith-eq-adapter          1059
+ :arith-fixed-eqs           1152
+ :arith-num-rows            897
+ :arith-offset-eqs          602
+ :arith-pivots              388
+ :arith-row-summations      2884
+ :arith-tableau-max-columns 1054
+ :arith-tableau-max-rows    897
+ :binary-propagations       141218
+ :conflicts                 503
+ :decisions                 9708
+ :del-clause                189112
+ :eliminated-vars           2
+ :final-checks              7
+ :interface-eqs             1
+ :max-generation            1
+ :max-memory                38.39
+ :memory                    21.55
+ :minimized-lits            4458
+ :mk-bool-var               113044
+ :mk-clause                 202497
+ :num-allocs                230318
+ :num-checks                2
+ :propagations              339345
+ :quant-instantiations      4
+ :restarts                  3
+ :rlimit-count              697810
+ :seq-add-axiom             3882
+ :seq-branch-!=             1
+ :seq-char2bit              363
+ :seq-fixed-length          3
+ :seq-length-coherence      2
+ :seq-num-reductions        2575
+ :time                      0.27
+ :total-time                0.26)
