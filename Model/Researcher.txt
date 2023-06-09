@@ -1,0 +1,42 @@
+sat
+((Paper_name "zplkKaPPxhHKFcpu")
+ (Researcher_name "PHPpKPYKPKkKPLhk")
+ (Student_paper true)
+ (isStudent true)
+ (word_Count 101))
+(:added-eqs                 23517
+ :arith-assert-diseq        34
+ :arith-assert-lower        1141
+ :arith-assert-upper        595
+ :arith-eq-adapter          615
+ :arith-fixed-eqs           732
+ :arith-num-rows            553
+ :arith-offset-eqs          288
+ :arith-pivots              182
+ :arith-row-summations      1808
+ :arith-tableau-max-columns 648
+ :arith-tableau-max-rows    553
+ :binary-propagations       92549
+ :conflicts                 342
+ :decisions                 5134
+ :del-clause                74694
+ :final-checks              4
+ :max-generation            1
+ :max-memory                32.32
+ :memory                    20.66
+ :minimized-lits            2678
+ :mk-bool-var               49730
+ :mk-clause                 83728
+ :num-allocs                146120
+ :num-checks                2
+ :propagations              190998
+ :quant-instantiations      2
+ :restarts                  1
+ :rlimit-count              391076
+ :seq-add-axiom             2052
+ :seq-char2bit              155
+ :seq-fixed-length          2
+ :seq-length-coherence      1
+ :seq-num-reductions        1067
+ :time                      0.17
+ :total-time                0.15)
