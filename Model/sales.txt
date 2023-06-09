@@ -1,0 +1,43 @@
+sat
+((customer_name "kkkppPPZSpx")
+ (Sales_Id 1)
+ (customerID 1)
+ (customerPhone "4422228224"))
+(:added-eqs                 8458
+ :arith-assert-diseq        42
+ :arith-assert-lower        485
+ :arith-assert-upper        316
+ :arith-bound-prop          1
+ :arith-eq-adapter          318
+ :arith-fixed-eqs           661
+ :arith-num-rows            266
+ :arith-offset-eqs          392
+ :arith-pivots              105
+ :arith-row-summations      832
+ :arith-tableau-max-columns 346
+ :arith-tableau-max-rows    266
+ :binary-propagations       18644
+ :conflicts                 139
+ :decisions                 1934
+ :del-clause                17146
+ :eliminated-applications   4
+ :final-checks              6
+ :interface-eqs             2
+ :max-generation            1
+ :max-memory                26.94
+ :memory                    19.96
+ :minimized-lits            1054
+ :mk-bool-var               15401
+ :mk-clause                 20271
+ :num-allocs                88458
+ :num-checks                2
+ :propagations              45514
+ :quant-instantiations      4
+ :rlimit-count              133456
+ :seq-add-axiom             881
+ :seq-char2bit              56
+ :seq-fixed-length          2
+ :seq-length-coherence      3
+ :seq-num-reductions        411
+ :time                      0.08
+ :total-time                0.07)
