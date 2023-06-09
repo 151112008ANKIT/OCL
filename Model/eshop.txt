@@ -1,0 +1,46 @@
+sat
+((Product_name "pxKcKs")
+ (product_ID 220)
+ (price1 1)
+ (isAvailable1 true)
+ (Product_code "220px"))
+(:added-eqs                 2972
+ :arith-assert-diseq        94
+ :arith-assert-lower        272
+ :arith-assert-upper        196
+ :arith-bound-prop          6
+ :arith-conflicts           1
+ :arith-eq-adapter          189
+ :arith-fixed-eqs           151
+ :arith-num-rows            87
+ :arith-offset-eqs          42
+ :arith-pivots              54
+ :arith-row-summations      247
+ :arith-tableau-max-columns 142
+ :arith-tableau-max-rows    87
+ :binary-propagations       1068
+ :conflicts                 53
+ :decisions                 612
+ :del-clause                5814
+ :eliminated-applications   2
+ :final-checks              14
+ :interface-eqs             3
+ :max-generation            1
+ :max-memory                24.02
+ :memory                    19.59
+ :minimized-lits            431
+ :mk-bool-var               7285
+ :mk-clause                 10759
+ :num-allocs                65849
+ :num-checks                2
+ :propagations              11142
+ :quant-instantiations      4
+ :rlimit-count              48525
+ :seq-add-axiom             552
+ :seq-char2bit              66
+ :seq-fixed-length          6
+ :seq-int.to.str            2
+ :seq-length-coherence      4
+ :seq-num-reductions        133
+ :time                      0.05
+ :total-time                0.05)
