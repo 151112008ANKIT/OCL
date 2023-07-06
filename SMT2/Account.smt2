@@ -44,7 +44,10 @@
 )
 
 (assert
-  (forall ((o Int)) (=> (Person o) (= (str.len address) 20)))
+  (forall ((o Int)) (=> (Person o) (and 
+            (> (str.len address) 20)  
+            (str.in.re address (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
+)   ))
 )
 
 (assert (exists ((o Int)) (Person o)))
