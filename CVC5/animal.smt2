@@ -8,7 +8,7 @@
 (declare-const feedMilk Bool)
 (declare-const Animal_code String)
 
-(assert (> (str.len Animal_name) 5))
+(assert (> (str.len Animal_name) 7))
 (assert (str.in_re Animal_name (re.* (re.range "a" "z"))))
 
 (assert
