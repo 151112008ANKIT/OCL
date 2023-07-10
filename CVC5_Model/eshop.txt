@@ -1,0 +1,10 @@
+sat
+((Product_name "aaaaaa") (product_ID 111) (price1 1) (isAvailable1 true) (Product_code "111aa"))
+cvc5::CONSTANT = { Boolean type: 1, String type: 2, integer type: 2 }
+cvc5::TERM = { AND: 1, EQUAL: 1, GEQ: 1, GT: 2, LEQ: 1, REGEXP_RANGE: 1, REGEXP_STAR: 1, STRING_CONCAT: 1, STRING_FROM_INT: 1, STRING_IN_REGEXP: 1, STRING_LENGTH: 1, STRING_SUBSTR: 2 }
+cvc5::VARIABLE = { Boolean type: 1 }
+driver::filename = eshop.smt2
+global::totalTime = 68ms
+theory::arith::inferencesConflict = { ARITH_CONF_EQ: 1, ARITH_CONF_SIMPLEX: 2 }
+theory::arith::inferencesLemma = { ARITH_ROW_IMPL: 1, ARITH_UNATE: 3 }
+theory::strings::inferencesLemma = { STRINGS_CODE_INJ: 15, STRINGS_CODE_PROXY: 6, STRINGS_EXTF: 4, STRINGS_LEN_NORM: 3, STRINGS_REGISTER_TERM: 24, STRINGS_REGISTER_TERM_ATOMIC: 10, STRINGS_RE_UNFOLD_POS: 3 }

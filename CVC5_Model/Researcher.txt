@@ -1,0 +1,10 @@
+sat
+((Paper_name "aaaaaa") (Researcher_name "AAAAAAAAAAAAAAAA") (Student_paper true) (isStudent true) (word_Count 101))
+cvc5::CONSTANT = { Boolean type: 2, String type: 2, integer type: 1 }
+cvc5::TERM = { AND: 1, GT: 3, IMPLIES: 1, LT: 1, REGEXP_RANGE: 3, REGEXP_STAR: 2, REGEXP_UNION: 1, STRING_IN_REGEXP: 2, STRING_LENGTH: 2 }
+cvc5::VARIABLE = { Boolean type: 1 }
+driver::filename = Researcher.smt2
+global::totalTime = 372ms
+theory::arith::inferencesConflict = { ARITH_CONF_EQ: 12, ARITH_CONF_SIMPLEX: 16 }
+theory::arith::inferencesLemma = { ARITH_ROW_IMPL: 1, ARITH_SPLIT_DEQ: 14, ARITH_UNATE: 5 }
+theory::strings::inferencesLemma = { STRINGS_CODE_INJ: 111, STRINGS_CODE_PROXY: 16, STRINGS_EXTF: 13, STRINGS_LEN_NORM: 31, STRINGS_REGISTER_TERM: 76, STRINGS_REGISTER_TERM_ATOMIC: 35, STRINGS_RE_UNFOLD_POS: 11 }
