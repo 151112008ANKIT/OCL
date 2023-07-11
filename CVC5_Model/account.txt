@@ -1,11 +1,11 @@
 sat
-((first_name "aaaaaa") (last_name "AAAAAA") (email "aaaaaa.AAAAAA@mu.ie") (account_number "0000000000") (address "AAAAAAAAAAAAAAAAAAAA"))
-cvc5::CONSTANT = { String type: 5 }
-cvc5::TERM = { AND: 2, EQUAL: 4, GT: 2, NOT: 1, REGEXP_RANGE: 6, REGEXP_STAR: 4, REGEXP_UNION: 2, STRING_CONCAT: 1, STRING_IN_REGEXP: 4, STRING_LENGTH: 4 }
+((Atom_name "AAAAAA") (Atomic_Weight 1) (Atomic_Symbol "AA") (isNobelGas1 false) (isReactive1 false))
+cvc5::CONSTANT = { Boolean type: 2, String type: 2, UNKNOWN_TYPE_CONSTANT: 1, integer type: 1 }
+cvc5::TERM = { EQUAL: 1, GT: 2, REGEXP_RANGE: 1, REGEXP_STAR: 1, STRING_IN_REGEXP: 1, STRING_LENGTH: 1, STRING_SUBSTR: 1 }
 cvc5::VARIABLE = { Boolean type: 1 }
-driver::filename = account.smt2
-global::totalTime = 356ms
-theory::arith::inferencesConflict = { ARITH_CONF_EQ: 49, ARITH_CONF_SIMPLEX: 28 }
-theory::arith::inferencesLemma = { ARITH_ROW_IMPL: 2, ARITH_SPLIT_DEQ: 22, ARITH_UNATE: 10 }
-theory::strings::inferencesConflict = { EQ_CONSTANT_MERGE: 2 }
-theory::strings::inferencesLemma = { STRINGS_CODE_INJ: 353, STRINGS_CODE_PROXY: 25, STRINGS_DEQ_LENGTH_SP: 1, STRINGS_DEQ_STRINGS_EQ: 1, STRINGS_EXTF: 21, STRINGS_LEN_NORM: 61, STRINGS_REGISTER_TERM: 134, STRINGS_REGISTER_TERM_ATOMIC: 67, STRINGS_RE_UNFOLD_POS: 21 }
+driver::filename = atom.smt2
+global::totalTime = 34ms
+theory::arith::inferencesConflict = { ARITH_CONF_EQ: 1, ARITH_CONF_SIMPLEX: 2 }
+theory::arith::inferencesLemma = { ARITH_ROW_IMPL: 1, ARITH_UNATE: 2 }
+theory::strings::inferencesLemma = { STRINGS_CODE_INJ: 15, STRINGS_CODE_PROXY: 6, STRINGS_EXTF: 4, STRINGS_LEN_NORM: 3, STRINGS_REGISTER_TERM: 24, STRINGS_REGISTER_TERM_ATOMIC: 10, STRINGS_RE_UNFOLD_POS: 3 }
+ankitjha@Ankits-MacBook-Air cvc5 % ./cvc5 person.smt2 --stats
