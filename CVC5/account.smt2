@@ -1,4 +1,5 @@
-(set-logic QF_SLIA)
+(set-option :strings-exp true)
+(set-logic ALL)
 (set-option :produce-models true)
 
 (define-sort Name () String)
@@ -10,7 +11,6 @@
 (declare-const email Email)
 (declare-const account_number Name)
 (declare-const address Address)
-
 
 (assert (> (str.len first_name) 5))
 (assert (str.in_re first_name (re.* (re.range "a" "z"))))
@@ -26,6 +26,14 @@
 
 (assert (and (= (str.len address) 20) (str.in_re address (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))))
 
+; Using quantifiers to express properties
+(assert (exists ((num Name) (add Address))
+           (and (= (str.at num 0) "1")  ; Check if account_number starts with "1"
+                (= (str.at num 1) "2")
+                (= (str.at num 2) "3")
+                (= (str.len num) 10)     ; Check if account_number length is 10
+                (str.contains add "a")   ; Check if address contains lowercase "a"
+                (str.contains add "A")))) ; Check if address contains uppercase "A"
 
 (check-sat)
 
