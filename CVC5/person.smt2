@@ -1,4 +1,4 @@
-(set-logic QF_SLIA)
+(set-logic ALL)
 (set-option :produce-models true)
 
 (declare-const first_name String)
@@ -30,5 +30,10 @@
 
 (assert (=> (= Gender "Male") IsCatholicPriest))
 
+; Using quantifiers to express a property
+(assert (forall ((p1 String) (p2 String))
+           (=> (and (= (str.at p1 0) (str.at p2 0)) (= (str.len p1) 5) (= (str.len p2) 5))
+               (= Gender Gender))))
+
 (check-sat)
-(get-model)
+(get-value(first_name last_name email Gender Eircode Area_code Street_code IsCatholicPriest))
