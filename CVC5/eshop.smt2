@@ -1,4 +1,5 @@
-(set-logic QF_SLIA)
+(set-option :strings-exp true)
+(set-logic ALL)
 (set-option :produce-models true)
 
 (declare-const Product_name String)
@@ -15,6 +16,13 @@
 
 (assert (> price1 0))
 (assert isAvailable1)
+
+; Using quantifiers to express a property
+(assert (forall ((p Int))
+           (=> (and (>= p 111) (<= p 999) (= (str.len (str.from_int p)) 3))
+               (=> (str.in_re (str.from_int p) (re.* (re.range "0" "9")))
+                   (=> (str.in_re (str.++ (str.from_int p) (str.substr Product_name 0 2)) (re.* (re.range "a" "z")))
+                       (=> isAvailable1 (> price1 50)))))))
 
 (check-sat)
 (get-value (Product_name product_ID price1 isAvailable1 Product_code))
