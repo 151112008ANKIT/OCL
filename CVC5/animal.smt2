@@ -1,4 +1,4 @@
-(set-logic QF_SLIA)
+(set-logic ALL)
 (set-option :produce-models true)
 
 (declare-const Animal_name String)
@@ -32,6 +32,11 @@
 (assert
   (= Animal_code (str.at Category 0))
 )
+
+; Using quantifiers to express a property
+(assert (forall ((c String))
+           (=> (= c "Mammals")
+               (and warmBlooded feedMilk))))
 
 (check-sat)
 (get-value (Animal_name Category warmBlooded feedMilk Animal_code))
