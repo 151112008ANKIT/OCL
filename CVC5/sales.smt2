@@ -1,4 +1,4 @@
-(set-logic QF_SLIA)
+(set-logic ALL)
 (set-option :produce-models true)
 
 (declare-const customer_name String)
@@ -17,5 +17,10 @@
 (assert (= (str.len customerPhone) 10))
 (assert (str.in_re customerPhone (re.* (re.range "0" "9"))))
 
+; Using quantifiers to express a property
+(assert (forall ((id Int))
+           (=> (and (> id 1) (< id Sales_Id))
+               (not (= customerID id)))))
+
 (check-sat)
-(get-model)
+(get-value(customer_name Sales_Id customerID customerPhone))
