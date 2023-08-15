@@ -1,4 +1,4 @@
-( set-logic QF_SLIA )
+( set-logic ALL )
 ( set-option :produce-models true )
 
 ( declare-const husband_name String )
@@ -16,7 +16,7 @@
 ( assert ( str.in_re husband_name ( re.* ( re.range "a" "z" ) ) ) )
 
 ( assert ( > ( str.len wife_name ) 5 ) )
-( assert ( str.in_re wife_name ( re.* ( re.range "a" "z" ) ) ) )
+( assert ( str.in_re wife_name ( re.* ( re.range "A" "z" ) ) ) )
 
 ( assert ( or (= wife_marital_status "Single") (= wife_marital_status "Married") ) )
 
@@ -33,6 +33,11 @@
 
 ( assert ( = husband_marital_status "Married" ) )
 ( assert ( = wife_marital_status "Married" ) )
+
+; Using quantifiers to express a property
+(assert (forall ((x String))
+           (=> (= x "Married")
+               (= wife_marital_status x))))
 
 ( check-sat )
 ( get-value ( husband_name wife_name husband_email wife_email husband_marital_status wife_marital_status husband_gender wife_gender husband_age wife_age ) )
