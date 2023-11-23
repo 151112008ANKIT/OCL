@@ -49,7 +49,9 @@
     (str.++ (first_name 1) "1")
     (str.++ (first_name 2) "2")
     (str.++ (first_name 3) "3")
-    ; Continue for other indices as needed
+    (str.++ (last_name 1) "1")
+    (str.++ (last_name 2) "2")
+    (str.++ (last_name 3) "3")
 ))
 
 (check-sat)
