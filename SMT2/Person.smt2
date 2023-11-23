@@ -1,19 +1,19 @@
-(declare-const first_name String)
-(declare-const last_name String)
-(declare-const email String)
-(declare-const Gender String)
-(declare-const Address String)
-(declare-const Area_code String)
-(declare-const Street_code String)
-(declare-const isCatholicPriestBool Bool)
+(declare-fun first_name (Int) String)
+(declare-fun last_name (Int) String)
+(declare-fun email (Int) String)
+(declare-fun Gender (Int) String)
+(declare-fun Address (Int) String)
+(declare-fun Area_code (Int) String)
+(declare-fun Street_code (Int) String)
+(declare-fun isCatholicPriest (Int) String)
 (declare-fun Person (Int) Bool)
 (declare-fun gender (Int) String)
 
 (assert 
     (forall ((o Int)) (=> (Person o)
         (and 
-            (> (str.len first_name) 5)
-            (str.in.re first_name (re.* (re.range "a" "z")))
+            (> (str.len (first_name o)) 5)
+            (str.in.re (first_name o) (re.* (re.range "a" "z")))
         )
     ))
 )
@@ -21,8 +21,8 @@
 (assert 
     (forall ((o Int)) (=> (Person o)
         (and 
-            (> (str.len last_name) 5)
-            (str.in.re last_name (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
+            (> (str.len (last_name o)) 5)
+            (str.in.re (last_name o) (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
         )
     ))
 )
@@ -30,10 +30,10 @@
 (assert
     (forall ((o Int)) (=> (Person o)
         (and 
-            (= (str.len Address) 5)
-            (str.in.re Address (re.* (re.union (re.range "A" "Z") (re.range "0" "9"))))
-            (= (str.at Address 0) Area_code)
-            (= (str.at Address 4) Street_code)
+            (= (str.len (Address o)) 5)
+            (str.in.re (Address o) (re.* (re.union (re.range "A" "Z") (re.range "0" "9"))))
+            (= (str.at (Address o) 0) (Area_code o))
+            (= (str.at (Address o) 4) (Street_code o))
         )
     ))
 )
@@ -46,17 +46,23 @@
 
 (assert
     (forall ((o Int)) (=> (Person o)
-        (= email (str.++ first_name "." last_name "@gmail.com"))
+        (= (email o) (str.++ (first_name o) "." (last_name o) "@gmail.com"))
     ))
 )
 
 (assert
     (forall ((o Int)) (=> (Person o)
-        (=> isCatholicPriestBool (= (gender o) "male"))
+        (=> (= (gender o) "male") (= (isCatholicPriest o) "Yes"))
+    ))
+)
+
+(assert
+    (forall ((o Int)) (=> (Person o)
+        (=> (= (gender o) "female") (= (isCatholicPriest o) "No"))
     ))
 )
 
 (assert (exists ((o Int)) (Person o)))
 
 (check-sat)
-(get-value (first_name last_name email Address Area_code Street_code isCatholicPriestBool gender))
+(get-value ((first_name 1) (last_name 1) (email 1) (Address 1) (Area_code 1) (Street_code 1) (isCatholicPriest 1) (gender 1)))
