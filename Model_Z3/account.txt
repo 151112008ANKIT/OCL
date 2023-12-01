@@ -41,5 +41,5 @@ sat
  :seq-length-coherence      1
  :seq-num-reductions        775
  :seq-solve-!=              1
- :time                      0.09
- :total-time                0.09)
+ :time                      0.10
+ :total-time                0.10)
