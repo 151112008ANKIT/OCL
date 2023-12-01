@@ -1,0 +1,50 @@
+sat
+(((first_name 1) "hlxkka")
+ ((last_name 1) "qppPhAh")
+ ((email 1) "hlxkka.qppPhAh@mu.ie"))
+(((first_name 2) "kckkhk")
+ ((last_name 2) "HPPDlP")
+ ((email 2) "kckkhk.HPPDlP@mu.ie"))
+(((first_name 3) "csxcsx")
+ ((last_name 3) "PEDSPB")
+ ((email 3) "csxcsx.PEDSPB@mu.ie"))
+(:added-eqs                 31533
+ :arith-assert-diseq        776
+ :arith-assert-lower        1759
+ :arith-assert-upper        1176
+ :arith-bound-prop          16
+ :arith-eq-adapter          874
+ :arith-fixed-eqs           3786
+ :arith-num-rows            438
+ :arith-offset-eqs          2903
+ :arith-pivots              221
+ :arith-row-summations      1369
+ :arith-tableau-max-columns 608
+ :arith-tableau-max-rows    438
+ :binary-propagations       34540
+ :conflicts                 246
+ :decisions                 8159
+ :del-clause                66553
+ :final-checks              15
+ :interface-eqs             5
+ :max-generation            2
+ :max-memory                40.36
+ :memory                    22.89
+ :minimized-lits            1853
+ :mk-bool-var               50418
+ :mk-clause                 87274
+ :mk-clause-binary          7136
+ :num-allocs                34775426
+ :num-checks                2
+ :propagations              121897
+ :quant-instantiations      20
+ :restarts                  2
+ :rlimit-count              386747
+ :seq-add-axiom             1844
+ :seq-char2bit              177
+ :seq-fixed-length          5
+ :seq-length-coherence      5
+ :seq-num-reductions        1448
+ :seq-solve-!=              3
+ :time                      0.11
+ :total-time                0.12)
