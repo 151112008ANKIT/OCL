@@ -1,43 +1,43 @@
 sat
-((customer_name "kkkppPPZSpx")
- (Sales_Id 1)
- (customerID 1)
- (customerPhone "4422228224"))
-(:added-eqs                 8458
- :arith-assert-diseq        42
- :arith-assert-lower        485
- :arith-assert-upper        316
- :arith-bound-prop          1
- :arith-eq-adapter          318
- :arith-fixed-eqs           661
- :arith-num-rows            266
- :arith-offset-eqs          392
- :arith-pivots              105
- :arith-row-summations      832
- :arith-tableau-max-columns 346
- :arith-tableau-max-rows    266
- :binary-propagations       18644
- :conflicts                 139
- :decisions                 1934
- :del-clause                17146
- :eliminated-applications   4
- :final-checks              6
- :interface-eqs             2
+(((customer_name 0) "BtdpxdcpmmT")
+ ((Sales_Id 0) 2)
+ ((customerID 0) "Z3Z0")
+ ((customerPhone 0) "9422224224"))
+(:added-eqs                 5082
+ :arith-assert-diseq        38
+ :arith-assert-lower        470
+ :arith-assert-upper        294
+ :arith-bound-prop          2
+ :arith-conflicts           1
+ :arith-eq-adapter          319
+ :arith-fixed-eqs           278
+ :arith-num-rows            394
+ :arith-offset-eqs          140
+ :arith-pivots              60
+ :arith-row-summations      558
+ :arith-tableau-max-columns 503
+ :arith-tableau-max-rows    394
+ :binary-propagations       4334
+ :conflicts                 70
+ :decisions                 781
+ :del-clause                8115
+ :final-checks              5
  :max-generation            1
- :max-memory                26.94
- :memory                    19.96
- :minimized-lits            1054
- :mk-bool-var               15401
- :mk-clause                 20271
- :num-allocs                88458
+ :max-memory                31.62
+ :memory                    21.83
+ :minimized-lits            726
+ :mk-bool-var               12564
+ :mk-clause                 18487
+ :mk-clause-binary          3454
+ :num-allocs                12864110
  :num-checks                2
- :propagations              45514
+ :propagations              15369
  :quant-instantiations      4
- :rlimit-count              133456
- :seq-add-axiom             881
- :seq-char2bit              56
- :seq-fixed-length          2
- :seq-length-coherence      3
- :seq-num-reductions        411
- :time                      0.08
- :total-time                0.07)
+ :rlimit-count              83950
+ :seq-add-axiom             761
+ :seq-char2bit              46
+ :seq-fixed-length          3
+ :seq-length-coherence      1
+ :seq-num-reductions        330
+ :time                      0.04
+ :total-time                0.06)
