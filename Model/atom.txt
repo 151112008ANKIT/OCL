@@ -1,42 +1,52 @@
 sat
-((Atom_name "pKspKD")
- (Atomic_Weight 1)
- (Atomic_Symbol "pK")
- (isNobelGas1 false)
- (isReactive1 true))
-(:added-eqs                 2017
- :arith-assert-diseq        7
- :arith-assert-lower        128
- :arith-assert-upper        70
- :arith-eq-adapter          72
- :arith-fixed-eqs           73
- :arith-num-rows            45
- :arith-offset-eqs          6
- :arith-pivots              31
- :arith-row-summations      170
- :arith-tableau-max-columns 70
- :arith-tableau-max-rows    45
- :binary-propagations       4907
- :conflicts                 59
- :decisions                 491
- :del-clause                11382
- :eliminated-applications   4
- :final-checks              4
- :max-generation            1
- :max-memory                22.23
- :memory                    19.41
- :minimized-lits            253
- :mk-bool-var               8078
- :mk-clause                 12763
- :num-allocs                57776
+(((Atom_name 1) "KVMSmf")
+ ((Atom_weight 1) 1)
+ ((Atom_Symbol 1) "KV")
+ ((isReactive 1) false))
+(((Atom_name 2) "PPpkpk")
+ ((Atom_weight 2) 2)
+ ((Atom_Symbol 2) "PP")
+ ((isReactive 2) false))
+(((Atom_name 3) "pLdPkh")
+ ((Atom_weight 3) 3)
+ ((Atom_Symbol 3) "pL")
+ ((isReactive 3) false))
+(:added-eqs                 10167
+ :arith-assert-diseq        195
+ :arith-assert-lower        746
+ :arith-assert-upper        371
+ :arith-bound-prop          4
+ :arith-eq-adapter          328
+ :arith-fixed-eqs           709
+ :arith-num-rows            191
+ :arith-offset-eqs          371
+ :arith-pivots              133
+ :arith-row-summations      691
+ :arith-tableau-max-columns 276
+ :arith-tableau-max-rows    191
+ :binary-propagations       10556
+ :conflicts                 139
+ :decisions                 2272
+ :del-clause                54552
+ :final-checks              9
+ :interface-eqs             1
+ :max-generation            2
+ :max-memory                33.07
+ :memory                    22.12
+ :minimized-lits            1282
+ :mk-bool-var               36741
+ :mk-clause                 70797
+ :mk-clause-binary          1651
+ :num-allocs                16083962
  :num-checks                2
- :propagations              14359
- :quant-instantiations      4
- :rlimit-count              41655
- :seq-add-axiom             283
- :seq-char2bit              29
- :seq-fixed-length          2
- :seq-length-coherence      1
- :seq-num-reductions        75
- :time                      0.05
- :total-time                0.04)
+ :propagations              65694
+ :quant-instantiations      12
+ :restarts                  1
+ :rlimit-count              182740
+ :seq-add-axiom             967
+ :seq-char2bit              120
+ :seq-fixed-length          4
+ :seq-length-coherence      3
+ :seq-num-reductions        425
+ :time                      0.08
+ :total-time                0.08)
