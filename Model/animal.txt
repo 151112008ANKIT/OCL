@@ -1,41 +1,44 @@
 sat
-((Animal_name "ppppppppppp")
- (Category "Fish")
- (warmBlooded false)
- (feedMilk false)
- (Animal_code "F"))
-(:added-eqs                 2170
- :arith-assert-diseq        19
- :arith-assert-lower        167
- :arith-assert-upper        118
- :arith-conflicts           1
- :arith-eq-adapter          124
- :arith-fixed-eqs           174
- :arith-num-rows            146
- :arith-offset-eqs          52
- :arith-pivots              29
- :arith-row-summations      238
- :arith-tableau-max-columns 198
- :arith-tableau-max-rows    146
- :binary-propagations       1893
- :conflicts                 27
- :decisions                 174
- :del-clause                10
- :final-checks              4
+(((Animal_name 1) "pdPkpCPPlPXb")
+ ((Category 1) "Fish")
+ ((warmBlooded 1) true)
+ ((feedMilk 1) false)
+ ((Animal_code 1) "F"))
+(:added-eqs                 7121
+ :arith-assert-diseq        32
+ :arith-assert-lower        396
+ :arith-assert-upper        250
+ :arith-conflicts           3
+ :arith-eq-adapter          254
+ :arith-fixed-eqs           231
+ :arith-num-rows            166
+ :arith-offset-eqs          45
+ :arith-pivots              95
+ :arith-row-summations      605
+ :arith-tableau-max-columns 215
+ :arith-tableau-max-rows    166
+ :binary-propagations       19896
+ :conflicts                 183
+ :decisions                 1419
+ :del-clause                21034
+ :final-checks              5
+ :interface-eqs             1
  :max-generation            1
- :max-memory                23.02
- :memory                    19.37
- :mk-bool-var               2960
- :mk-clause                 771
- :num-allocs                60512
+ :max-memory                28.20
+ :memory                    21.31
+ :minimized-lits            831
+ :mk-bool-var               15759
+ :mk-clause                 24834
+ :mk-clause-binary          4772
+ :num-allocs                8749940
  :num-checks                2
- :propagations              2243
+ :propagations              49101
  :quant-instantiations      5
- :rlimit-count              30728
- :seq-add-axiom             325
- :seq-char2bit              31
+ :rlimit-count              121931
+ :seq-add-axiom             667
+ :seq-char2bit              64
  :seq-fixed-length          2
- :seq-length-coherence      1
- :seq-num-reductions        126
+ :seq-length-coherence      2
+ :seq-num-reductions        366
  :time                      0.05
- :total-time                0.05)
+ :total-time                0.06)
