@@ -1,0 +1,38 @@
+sat
+(((first_name 1) "kkkkkk")
+ ((last_name 1) "kkkkkk")
+ ((email 1) "kkkkkk.kkkkkk@gmail.com")
+ ((Address 1) "KKKKK")
+ ((Area_code 1) "K")
+ ((Street_code 1) "K")
+ ((isCatholicPriest 1) "No")
+ ((gender 1) "female"))
+(:added-eqs                 267
+ :arith-assert-diseq        25
+ :arith-assert-lower        95
+ :arith-assert-upper        41
+ :arith-bound-prop          15
+ :arith-eq-adapter          66
+ :arith-fixed-eqs           29
+ :arith-num-rows            36
+ :arith-offset-eqs          5
+ :arith-pivots              12
+ :arith-row-summations      42
+ :arith-tableau-max-columns 73
+ :arith-tableau-max-rows    36
+ :binary-propagations       13
+ :decisions                 3
+ :final-checks              6
+ :max-generation            1
+ :max-memory                25.24
+ :memory                    21.21
+ :mk-bool-var               346
+ :mk-clause                 331
+ :mk-clause-binary          17
+ :num-allocs                7513037
+ :num-checks                2
+ :propagations              118
+ :quant-instantiations      7
+ :rlimit-count              18672
+ :time                      0.03
+ :total-time                0.03)
