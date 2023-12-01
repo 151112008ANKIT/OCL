@@ -1,42 +1,43 @@
 sat
-((Paper_name "zplkKaPPxhHKFcpu")
- (Researcher_name "PHPpKPYKPKkKPLhk")
- (Student_paper true)
- (isStudent true)
- (word_Count 101))
-(:added-eqs                 23517
- :arith-assert-diseq        34
- :arith-assert-lower        1141
- :arith-assert-upper        595
- :arith-eq-adapter          615
- :arith-fixed-eqs           732
- :arith-num-rows            553
- :arith-offset-eqs          288
- :arith-pivots              182
- :arith-row-summations      1808
- :arith-tableau-max-columns 648
- :arith-tableau-max-rows    553
- :binary-propagations       92549
- :conflicts                 342
- :decisions                 5134
- :del-clause                74694
+(((Paper_name 1) "PkPPPHkpHKpzKHkk")
+ ((Researcher_name 1) "HXKPdcpsPphmHktL")
+ ((Student_paper 1) false)
+ ((word_Count 1) 1001)
+ ((isResearcher 1) true))
+(:added-eqs                 56814
+ :arith-assert-diseq        51
+ :arith-assert-lower        2157
+ :arith-assert-upper        1080
+ :arith-eq-adapter          1117
+ :arith-fixed-eqs           1353
+ :arith-num-rows            839
+ :arith-offset-eqs          617
+ :arith-pivots              393
+ :arith-row-summations      3352
+ :arith-tableau-max-columns 981
+ :arith-tableau-max-rows    839
+ :binary-propagations       186539
+ :conflicts                 585
+ :decisions                 13934
+ :del-clause                194310
  :final-checks              4
  :max-generation            1
- :max-memory                32.32
- :memory                    20.66
- :minimized-lits            2678
- :mk-bool-var               49730
- :mk-clause                 83728
- :num-allocs                146120
+ :max-memory                40.08
+ :memory                    23.22
+ :minimized-lits            5060
+ :mk-bool-var               115831
+ :mk-clause                 207808
+ :mk-clause-binary          19929
+ :num-allocs                49920982
  :num-checks                2
- :propagations              190998
- :quant-instantiations      2
- :restarts                  1
- :rlimit-count              391076
- :seq-add-axiom             2052
- :seq-char2bit              155
+ :propagations              477456
+ :quant-instantiations      3
+ :restarts                  2
+ :rlimit-count              903443
+ :seq-add-axiom             3296
+ :seq-char2bit              364
  :seq-fixed-length          2
  :seq-length-coherence      1
- :seq-num-reductions        1067
- :time                      0.17
- :total-time                0.15)
+ :seq-num-reductions        2680
+ :time                      0.20
+ :total-time                0.21)
