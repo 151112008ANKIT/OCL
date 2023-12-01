@@ -1,0 +1,33 @@
+sat
+(((customer_name 0) "kaKKHKKKKKK")
+ ((Sales_Id 0) 2)
+ ((customerID 0) "DKKK")
+ ((customerPhone 0) "9222222222"))
+(:added-eqs                 231
+ :arith-assert-diseq        16
+ :arith-assert-lower        69
+ :arith-assert-upper        34
+ :arith-bound-prop          7
+ :arith-eq-adapter          49
+ :arith-fixed-eqs           23
+ :arith-num-rows            29
+ :arith-offset-eqs          8
+ :arith-pivots              4
+ :arith-row-summations      23
+ :arith-tableau-max-columns 55
+ :arith-tableau-max-rows    29
+ :binary-propagations       60
+ :final-checks              1
+ :max-generation            1
+ :max-memory                25.65
+ :memory                    21.41
+ :mk-bool-var               275
+ :mk-clause                 113
+ :mk-clause-binary          127
+ :num-allocs                6224194
+ :num-checks                2
+ :propagations              85
+ :quant-instantiations      4
+ :rlimit-count              30408
+ :time                      0.02
+ :total-time                0.02)
