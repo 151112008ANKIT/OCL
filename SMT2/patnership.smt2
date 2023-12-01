@@ -1,56 +1,53 @@
-(declare-const father_name String)
-(declare-const mother_name String)
-(declare-const child_name String)
-(declare-const Partner String)
-(declare-const parent String)
-(declare-const relationship_status String)
+(declare-fun father_name (Int) String)
+(declare-fun mother_name (Int) String)
+(declare-fun child_name (Int) String)
+(declare-fun Partner (Int) String)
+(declare-fun parent (Int) String)
+(declare-fun relationship_status (Int) String)
 (declare-fun isPerson (Int) Bool)
 
-; Constraint: Length and character pattern for father's name
 (assert 
     (forall ((o Int)) (=> (isPerson o)  
         (and 
-            (> (str.len father_name) 15)  
-            (str.in.re father_name (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
+            (> (str.len (father_name o)) 15)  
+            (str.in.re (father_name o) (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
         )
     ))
 )
 
-; Constraint: Length and character pattern for mother's name
 (assert 
     (forall ((o Int)) (=> (isPerson o)  
         (and 
-            (> (str.len mother_name) 15)  
-            (str.in.re mother_name (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
+            (> (str.len (mother_name o)) 15)  
+            (str.in.re (mother_name o) (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
         )
     ))
 )
 
-; Constraint: Length and character pattern for child's name
 (assert 
     (forall ((o Int)) (=> (isPerson o)  
         (and 
-            (> (str.len child_name) 15)  
-            (str.in.re child_name (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
+            (> (str.len (child_name o)) 15)  
+            (str.in.re (child_name o) (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
         )
     ))
 )
 
-; Constraint: Child's parent should be the father and mother
 (assert
     (forall ((o Int)) (=> (isPerson o)
-        (=> (and (= o 0) (= Partner "father") (= parent "child")) (= father_name child_name))
-        (=> (and (= o 0) (= Partner "mother") (= parent "child")) (= mother_name child_name))
+        (=> (and (= o 0) (= (Partner o) "father") (= (parent o) "child")) (= (father_name o) (child_name o)))
+        (=> (and (= o 0) (= (Partner o) "mother") (= (parent o) "child")) (= (mother_name o) (child_name o)))
     ))
 )
 
-; Constraint: Generate parent's name as concatenation of father's name and mother's name
-(declare-const parent_name String)
-(assert (= parent_name (str.++ father_name " " mother_name)))
+(define-fun parent_name ((o Int)) String
+    (str.++ (father_name o) " " (mother_name o))
+)
 
-; Constraint: Set relationship as "Partners" between the father and mother
-(assert (= relationship_status "Partners"))
+(define-fun rel_status ((o Int)) String
+    "Partners"
+)
 
-(assert (exists ((o Int)) (isPerson o)))
+(assert (isPerson 0)) ; Adding an assertion to assign values to quantified variables
 (check-sat)
-(get-value (father_name mother_name child_name parent_name relationship_status))
+(get-value ((father_name 0) (mother_name 0) (child_name 0) (rel_status 0) (parent_name 0)))
