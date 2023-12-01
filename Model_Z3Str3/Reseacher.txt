@@ -1,0 +1,27 @@
+sat
+(((Paper_name 1) "kKKPKPKKKKKKKKKK")
+ ((Researcher_name 1) "KKKKKKKKKKKKKKKK")
+ ((Student_paper 1) true)
+ ((word_Count 1) 1001)
+ ((isResearcher 1) true))
+(:added-eqs            27
+ :arith-assert-diseq   3
+ :arith-assert-lower   10
+ :arith-assert-upper   1
+ :arith-eq-adapter     3
+ :binary-propagations  10
+ :decisions            1
+ :final-checks         1
+ :max-generation       1
+ :max-memory           28.87
+ :memory               22.20
+ :mk-bool-var          48
+ :mk-clause            25
+ :mk-clause-binary     13
+ :num-allocs           10119986
+ :num-checks           2
+ :propagations         18
+ :quant-instantiations 3
+ :rlimit-count         27437
+ :time                 0.02
+ :total-time           0.03)
