@@ -1,49 +1,48 @@
 sat
-((husband_name "PlPPKSPPpHppkdtP")
- (wife_name "HPpPKPkHPpcCPPkh")
- (husband_email "PlPPKSPPpHppkdtP@gmail.com")
- (wife_email "HPpPKPkHPpcCPPkh@gmail.com")
- (husband_marital_status "Married")
- (wife_marital_status "Married")
- (husband_gender "Male")
- (wife_gender "Female")
- (husband_age 19)
- (wife_age 19))
-(:added-eqs                 29778
- :arith-assert-diseq        38
- :arith-assert-lower        1207
- :arith-assert-upper        648
- :arith-eq-adapter          672
- :arith-fixed-eqs           848
- :arith-num-rows            554
- :arith-offset-eqs          364
- :arith-pivots              209
- :arith-row-summations      2019
- :arith-tableau-max-columns 649
- :arith-tableau-max-rows    554
- :binary-propagations       137024
- :conflicts                 423
- :decisions                 6552
- :del-clause                69809
- :eliminated-applications   4
- :eliminated-vars           2
+(((husband_name 1) "KKKpPkPprKdkPSns")
+ ((wife_name 1) "pKPPpdkPPHHpSlPy")
+ ((husband_email 1) "KKKpPkPprKdkPSns@gmail.com")
+ ((wife_email 1) "pKPPpdkPPHHpSlPy@gmail.com")
+ ((husband_marital_status 1) "Married")
+ ((wife_marital_status 1) "Married")
+ ((husband_gender 1) "Male")
+ ((wife_gender 1) "Female")
+ ((husband_age 1) 19)
+ ((wife_age 1) 19))
+(:added-eqs                 26006
+ :arith-assert-diseq        34
+ :arith-assert-lower        1085
+ :arith-assert-upper        574
+ :arith-eq-adapter          597
+ :arith-fixed-eqs           753
+ :arith-num-rows            558
+ :arith-offset-eqs          362
+ :arith-pivots              173
+ :arith-row-summations      1749
+ :arith-tableau-max-columns 659
+ :arith-tableau-max-rows    558
+ :binary-propagations       106845
+ :conflicts                 340
+ :decisions                 6253
+ :del-clause                76091
  :final-checks              4
  :max-generation            1
- :max-memory                32.88
- :memory                    20.70
- :minimized-lits            3055
- :mk-bool-var               48172
- :mk-clause                 77604
- :num-allocs                157929
+ :max-memory                36.40
+ :memory                    22.25
+ :minimized-lits            2388
+ :mk-bool-var               50898
+ :mk-clause                 84861
+ :mk-clause-binary          13443
+ :num-allocs                27179503
  :num-checks                2
- :propagations              240485
- :quant-instantiations      8
- :restarts                  1
- :rlimit-count              472841
- :seq-add-axiom             2244
- :seq-char2bit              159
+ :propagations              204846
+ :quant-instantiations      10
+ :restarts                  2
+ :rlimit-count              423989
+ :seq-add-axiom             1675
+ :seq-char2bit              168
  :seq-fixed-length          2
  :seq-length-coherence      1
- :seq-num-reductions        1502
- :time                      0.17
- :total-time                0.16)
+ :seq-num-reductions        1325
+ :time                      0.11
+ :total-time                0.12)
