@@ -15,3 +15,19 @@ To use Z3 from the command line, navigate to the build directory in your Z3 inst
 
 Example: /path/to/z3/build/z3 input.smt2
 
+
+CVC5 SMT Solver
+Installation
+To install CVC5, follow these steps:
+
+Visit the official CVC5 GitHub repository.
+Clone the repository to your local machine: git clone https://github.com/CVC5/CVC5.git
+
+Navigate to the CVC5 directory: cd CVC5
+
+Usage
+Once CVC5 is installed, you can use it via the command line or through its APIs in various programming languages such as C++, Python, and Java.
+
+Example: /path/to/cvc5/cvc5 input.smt2
+
+
