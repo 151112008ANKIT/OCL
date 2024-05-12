@@ -15,7 +15,7 @@
     (forall ((o Int)) (=> (Person o)
         (and 
             (> (str.len (first_name o)) 5)
-            (str.in.re (first_name o) (re.* (re.range "a" "z")))
+            (str.in.re (first_name o) (re.++ (re.range "A" "Z") (re.* (re.range "a" "z"))))
         )
     ))
 )
