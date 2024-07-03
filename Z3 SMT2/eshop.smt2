@@ -3,8 +3,7 @@
 (declare-fun price1 (Int) Int)
 (declare-fun isAvailable1 (Int) Bool)
 (declare-fun Product_code (Int) String)
-(define-fun isProduct ((o Int)) Bool
-   (and (>= o 1) (<= o 15)))
+(define-fun isProduct ((o Int)) Bool true)
 
 
 (assert 
