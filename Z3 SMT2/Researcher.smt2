@@ -1,3 +1,4 @@
+(declare-fun Oid (Int) Int)
 (declare-fun Paper_name (Int) String)
 (declare-fun Researcher_name (Int) String)
 (declare-fun Student_paper (Int) Bool)
@@ -7,61 +8,62 @@
 (declare-fun isPaper (Int) Bool)
 (declare-fun isResearcher (Int) Bool)
 
-(define-fun Person ((o Int)) Bool
-    true)
-
-
-
-
+(define-fun Person ((o Int)) Bool true)
 
 (assert 
-    (forall ((o Int)) (=> (isPaper o)  
+    (forall ((o Int)) (=> (isPaper (Oid o))  
         (and 
-            (> (str.len (Paper_name o)) 15)  
-            (str.in.re (Paper_name o) (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
-        )
-    ))
-)
-
-
-(assert 
-    (forall ((o Int)) (=> (isResearcher o)  
-        (and 
-            (> (str.len (Researcher_name o)) 15)  
-            (str.in.re (Researcher_name o) (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
+            (> (str.len (Paper_name (Oid o))) 15)  
+            (str.in.re (Paper_name (Oid o)) (re.* (re.union (re.range "A" "Z") (re.range "a" "z") (re.range "0" "9"))))
         )
     ))
 )
 
 (assert 
-    (forall ((o Int)) (=> (isStudent o)  
+    (forall ((o Int)) (=> (isResearcher (Oid o))  
         (and 
-            (= (str.len (Student_name o)) 15)  
-             (str.in.re (Student_name o) (re.* (re.union (re.range "A" "Z") (re.range "a" "z"))))
+            (> (str.len (Researcher_name (Oid o))) 15)  
+            (str.in.re (Researcher_name (Oid o)) (re.* (re.union (re.range "A" "Z") (re.range "a" "z") (re.range "0" "9"))))
         )
     ))
 )
 
-; Constraint: word_Count should be greater than 10000 and less than 25000
-
 (assert 
-    (forall ((o Int)) (=> (isPaper o)
-        (and (> (word_Count o) 10000) (< (word_Count o) 25000))
+    (forall ((o Int)) (=> (isStudent (Oid o))  
+        (and 
+            (= (str.len (Student_name (Oid o))) 15)  
+            (str.in.re (Student_name (Oid o)) (re.* (re.union (re.range "A" "Z") (re.range "a" "z") (re.range "0" "9"))))
+        )
     ))
 )
 
-; Constraint: if Student_paper is True, then Author must be a student
 (assert 
-    (forall ((o Int)) (=> (Student_paper o) (isStudent o)))
+    (forall ((o Int)) (=> (isPaper (Oid o))
+        (and (> (word_Count (Oid o)) 10000) (< (word_Count (Oid o)) 25000))
+    ))
 )
 
-; Constraint: There must be at least one Student_paper
-(assert (exists ((o Int)) (and (isPaper o) (Student_paper o))))
+(assert 
+    (forall ((o Int)) (=> (Student_paper (Oid o)) (isStudent (Oid o))))
+)
 
-(assert (exists ((o Int)) (isPaper o)))
-(assert (exists ((o Int)) (isResearcher o)))
+(assert (exists ((o Int)) (and (isPaper (Oid o)) (Student_paper (Oid o)))))
+(assert (exists ((o Int)) (isPaper (Oid o))))
+(assert (exists ((o Int)) (isResearcher (Oid o))))
 
-;(assert (distinct (Paper_name 1) (Paper_name 2)))
+(assert (distinct 
+    (str.++ (Paper_name (Oid 1)) "1")
+    (str.++ (Paper_name (Oid 2)) "2")
+    (str.++ (Paper_name (Oid 3)) "3")    
+    (str.++ (Researcher_name (Oid 1)) "1")
+    (str.++ (Researcher_name (Oid 2)) "2") 
+    (str.++ (Researcher_name (Oid 3)) "3")  
+    (str.++ (Student_name (Oid 1)) "1") 
+    (str.++ (Student_name (Oid 2)) "2")
+    (str.++ (Student_name (Oid 3)) "3")  
+))
 
 (check-sat)
-(get-value ((Paper_name 1)(Student_name 1) (Researcher_name 1) (Student_paper 1) (word_Count 1) ))
+(get-value ((Paper_name (Oid 1))(Student_name (Oid 1))(Researcher_name (Oid 1))(Student_paper (Oid 1))(word_Count (Oid 1))))
+(get-value ((Paper_name (Oid 2))(Student_name (Oid 2))(Researcher_name (Oid 2))(Student_paper (Oid 2))(word_Count (Oid 2))))
+(get-value ((Paper_name (Oid 3))(Student_name (Oid 3))(Researcher_name (Oid 3))(Student_paper (Oid 3))(word_Count (Oid 3))))
