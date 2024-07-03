@@ -9,6 +9,7 @@
 (declare-fun email (Int) String)
 (declare-fun address (Int) String)
 (declare-fun Account_number (Int) Int)
+(declare-fun Oid (Int) Int)
 
 (define-fun Person ((o Int)) Bool
    true
@@ -50,8 +51,6 @@
     ))
 )
 
-
-
 (assert 
     (forall ((o Int)) (=> (Person o)
         (and
@@ -61,18 +60,24 @@
     ))
 )
 
+(assert 
+    (forall ((o Int)) (=> (Person o)
+        (and
+            (>= (Oid o) 1)
+            (<= (Oid o) 5)
+        )
+    ))
+)
+
 (assert (exists ((o Int)) (Person o)))
 (assert (distinct (first_name 1) (first_name 2) (first_name 3)(first_name 4)(first_name 5)))
 (assert (distinct (last_name 1) (last_name 2) (last_name 3)(last_name 4)(last_name 5)))
-
-
-(assert (distinct 
-    (Account_number 1) (Account_number 2)(Account_number 3) (Account_number 4) (Account_number 5)
-))
+(assert (distinct (Account_number 1) (Account_number 2)(Account_number 3) (Account_number 4) (Account_number 5)))
+(assert (distinct (Oid 1) (Oid 2) (Oid 3) (Oid 4) (Oid 5)))
 
 (check-sat)
-(get-value ((first_name 1)(last_name 1)(email 1)(Account_number 1)))
-;(get-value ((first_name 2)(last_name 2)(email 2)(Account_number 2)))
-;(get-value ((first_name 3)(last_name 3)(email 3)(Account_number 3)))
-;(get-value ((first_name 4)(last_name 4)(email 4)(Account_number 4)))
-;(get-value ((first_name 5)(last_name 5)(email 5)(Account_number 5)))
+(get-value ((first_name 1)(last_name 1)(email 1)(Account_number 1)(Oid 1)))
+;(get-value ((first_name 2)(last_name 2)(email 2)(Account_number 2)(Oid 2)))
+;(get-value ((first_name 3)(last_name 3)(email 3)(Account_number 3)(Oid 3)))
+;(get-value ((first_name 4)(last_name 4)(email 4)(Account_number 4)(Oid 4)))
+;(get-value ((first_name 5)(last_name 5)(email 5)(Account_number 5)(Oid 5)))
