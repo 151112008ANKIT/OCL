@@ -54,3 +54,37 @@ Once CVC5 is installed, you can use it via the command line or through its APIs 
    ```sh
     ./path/to/cvc5/cvc5 input.smt2 --stats
 
+# Ostrich SMT Solver
+
+## Introduction
+This repository provides instructions for installing and using the Ostrich SMT (Satisfiability Modulo Theories) solver. Ostrich can be used for formal verification, constraint solving, and other computational logic tasks.
+
+## Installation
+To install Ostrich, follow these steps:
+
+1. Visit the official [Ostrich GitHub repository](https://github.com/uuverifiers/ostrich).
+2. Clone the repository to your local machine:
+   ```sh
+   git clone https://github.com/uuverifiers/ostrich.git
+3. Navigate to the Ostrich directory:
+   ```sh
+     cd ostrich
+
+4. Build the project using sbt (Scala Build Tool):
+    ```sh
+      sbt assembly
+
+## Usage
+Once Ostrich is installed, you can use it via the command line. You can provide input files containing SMT-LIB scripts as arguments.
+
+5. Command Line
+To use Ostrich from the command line, navigate to the directory containing the Ostrich JAR file and run the java command with the JAR file and input file as arguments.
+  ```sh
+   java -jar target/scala-2.12/ostrich-assembly-0.1.jar input.smt2
+6. Check Statistics:
+ ```sh
+  java -jar target/scala-2.12/ostrich-assembly-0.1.jar input.smt2 -logging=stats
+
+
+
+
