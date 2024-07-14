@@ -22,9 +22,9 @@ To use Z3 from the command line, navigate to the build directory in your Z3 inst
 Example:
    ```sh
 /path/to/z3/build/z3 input.smt2
+sh```
 
-
-## CVC5 SMT Solver
+##CVC5 SMT Solver
 
 To install CVC5, follow these steps:
 
