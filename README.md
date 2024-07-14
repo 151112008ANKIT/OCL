@@ -20,6 +20,7 @@ Once Z3 is installed, you can use it via the command line or through its APIs in
 Command Line
 To use Z3 from the command line, navigate to the build directory in your Z3 installation and run the z3 executable. You can provide input files containing SMT-LIB or Z3-specific scripts as arguments.
 Example:
+   ```sh
 /path/to/z3/build/z3 input.smt2
 
 ## CVC5 SMT Solver
