@@ -12,8 +12,9 @@ To install Z3, follow these steps:
 2. Clone the repository to your local machine:
    ```sh
    git clone https://github.com/Z3Prover/z3.git
-cd z3
-Usage
+   cd z3
+   
+## Usage
 Once Z3 is installed, you can use it via the command line or through its APIs in various programming languages such as Python, C++, and .NET.
 
 Command Line
