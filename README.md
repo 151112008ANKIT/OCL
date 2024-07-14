@@ -23,6 +23,7 @@ Example:
    ```sh
 /path/to/z3/build/z3 input.smt2
 
+
 ## CVC5 SMT Solver
 
 To install CVC5, follow these steps:
