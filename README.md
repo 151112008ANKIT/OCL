@@ -79,11 +79,11 @@ Once Ostrich is installed, you can use it via the command line. You can provide 
 
 5. Command Line
 To use Ostrich from the command line, navigate to the directory containing the Ostrich JAR file and run the java command with the JAR file and input file as arguments.
-  ```sh
-   java -jar target/scala-2.12/ostrich-assembly-0.1.jar input.smt2
+    ```sh
+       java -jar target/scala-2.12/ostrich-assembly-0.1.jar input.smt2
 6. Check Statistics:
- ```sh
-  java -jar target/scala-2.12/ostrich-assembly-0.1.jar input.smt2 -logging=stats
+   ```sh
+     java -jar target/scala-2.12/ostrich-assembly-0.1.jar input.smt2 -logging=stats
 
 
 
