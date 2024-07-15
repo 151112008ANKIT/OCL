@@ -1,7 +1,7 @@
 # SMT Solvers: Z3 and CVC5
 
 ## Introduction
-This repository provides instructions for installing and using two popular SMT (Satisfiability Modulo Theories) solvers: Z3 and CVC5. These solvers can be used for formal verification, constraint solving, and other computational logic tasks.
+This repository provides instructions for installing and using three popular SMT (Satisfiability Modulo Theories) solvers: Z3, CVC5 and Ostrich. These solvers can be used for verification, constraint solving, and other computational logic tasks.
 
 ## Z3 SMT Solver
 
