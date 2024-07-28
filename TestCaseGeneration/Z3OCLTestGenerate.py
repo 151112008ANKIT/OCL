@@ -36,17 +36,17 @@ def contains_small(s, i):
 # Define template subsets for TG3
 TG3 = [
     ("inv ValidFirstNameCharacters: let small:Set(String) = Set{'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'} in let capital:Set(String) = Set{'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'} in capital->includes(self.first_name.substring(1,1)) and Sequence{2..self.first_name.size()}.forAll(i | small->includes(self.first_name.substring(i,i)))",
-     And(contains_capital(first_name), And([contains_small(first_name, i) for i in range(1, 10)]))),  # Using a smaller range for practical reasons
+     And(contains_capital(first_name), And([contains_small(first_name, i) for i in range(1, 10)]))),  
     ("inv ValidFirstNameCharactersImplies: self.first_name.size() > 0 implies (let small:Set(String) = Set{'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'} in let capital:Set(String) = Set{'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'} in capital->includes(self.first_name.substring(1,1)) and Sequence{2..self.first_name.size()}.forAll(i | small->includes(self.first_name.substring(i,i))))",
      Implies(Length(first_name) > 0, And(contains_capital(first_name), And([contains_small(first_name, i) for i in range(1, 10)])))),
     ("inv ValidFirstNameCharactersForAll: Set{self.first_name}->forAll(fn | let small:Set(String) = Set{'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'} in let capital:Set(String) = Set{'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'} in capital->includes(fn.substring(1,1)) and Sequence{2..fn.size()}.forAll(i | small->includes(fn.substring(i,i))))",
      ForAll([first_name], And(contains_capital(first_name), And([contains_small(first_name, i) for i in range(1, 10)])))),
     ("inv ValidFirstNameCharactersLet: let small:Set(String) = Set{'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'} in let capital:Set(String) = Set{'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'} in let fname = self.first_name in capital->includes(fname.substring(1,1)) and Sequence{2..fname.size()}.forAll(i | small->includes(fname.substring(i,i)))",
-     And(contains_capital(first_name), And([contains_small(first_name, i) for i in range(1, 10)]))),  # Simplified
+     And(contains_capital(first_name), And([contains_small(first_name, i) for i in range(1, 10)]))),  
     ("inv ValidFirstNameCharactersNotOr: not (not (let small:Set(String) = Set{'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'} in let capital:Set(String) = Set{'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'} in capital->includes(self.first_name.substring(1,1))) or Sequence{2..self.first_name.size()}.exists(i | not small->includes(self.first_name.substring(i,i))))",
      Not(Or(Not(contains_capital(first_name)), Exists([Int('i')], And(Int('i') >= 1, Int('i') < Length(first_name), Not(Or([contains_small(first_name, i) for i in range(1, 10)]))))))),
     ("inv ValidFirstNameCharactersExcludingIncluding: let small:Set(String) = Set{'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'} in let capital:Set(String) = Set{'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'} in Set{self.first_name.substring(1,1)}->excludingAll(capital)->isEmpty() and Sequence{2..self.first_name.size()}->forAll(i | Set{self.first_name.substring(i,i)}->excludingAll(small)->isEmpty())",
-     And(contains_capital(first_name), And([contains_small(first_name, i) for i in range(1, 10)])))  # Simplified
+     And(contains_capital(first_name), And([contains_small(first_name, i) for i in range(1, 10)])))  
 ]
 
 solver = Solver()
