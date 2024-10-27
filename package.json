@@ -1,0 +1,20 @@
+{
+  "name": "ocl-project",
+  "version": "1.0.0",
+  "description": "A project for OCL (Object Constraint Language) benchmark generation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "echo 'Building project...' && exit 0",
+    "test": "echo 'Running tests...' && exit 0",
+    "deploy": "echo 'Deploying project...' && exit 0"
+  },
+  "author": "Ankit Jha",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"   // Example dependency
+  },
+  "devDependencies": {
+    "jest": "^29.2.0"     // Example for a test framework
+  }
+}
