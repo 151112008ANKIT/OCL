@@ -12,9 +12,9 @@
   "author": "Ankit Jha",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2"   // Example dependency
+    "express": "^4.18.2"
   },
   "devDependencies": {
-    "jest": "^29.2.0"     // Example for a test framework
+    "jest": "^29.2.0"
   }
 }
