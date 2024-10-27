@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                https://github.com/AnkitMU/OCL.git
-                checkout scm
+                // Cloning the repository
+                git url: 'https://github.com/AnkitMU/OCL.git', branch: 'main'
             }
         }
 
@@ -32,7 +32,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                // Add deployment steps here, e.g., copy files to a server or deploy to GitHub Pages
+                // Add deployment steps here, e.g., deploy to a server
                 echo 'Deploying application...'
             }
         }
